@@ -885,12 +885,13 @@ Symbol.toPrimitive
   - с помощью атрибута HTML (Обработчик может быть назначен прямо в разметке, в атрибуте, который называется on<событие>)
     ```javascript
 <input type="button" onclick="alert('Клик!')" value="Кнопка">
-```
-    * 
-		
+```		
   - использовать свойства  DOM-объекта
-    
-    * <input type="button" id="button" value="Кнопка">
+
+		 ```javascript
+<input type="button" onclick="alert('Клик!')" value="Кнопка">
+```	
+    * 
 <script>
   button.onclick = function() {
     alert('Клик!');
@@ -898,9 +899,9 @@ Symbol.toPrimitive
 </script>
   - доступ к элементу через this
     Доступ к элементу через this
-    * <button onclick="alert(this.innerHTML)">Нажми меня</button>
-
- 
+		```javascript
+<button onclick="alert(this.innerHTML)">Нажми меня</button>
+```		
     Обработчик всегда хранится в свойстве DOM-объекта, а атрибут – лишь один из способов его инициализации.
 
 		Так как у элемента DOM может быть только одно свойство с именем onclick, то назначить более одного обработчика так нельзя.
