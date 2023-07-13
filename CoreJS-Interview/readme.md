@@ -888,13 +888,18 @@ Symbol.toPrimitive
    	```
   - использовать свойства  DOM-объекта
  		```JS
-   <input type="button" onclick="alert('Клик!')" value="Кнопка">
-   ```
+   	<input id="elem" type="button" value="Нажми меня!">
+		<script>
+		  elem.onclick = function() {
+		    alert('Спасибо');
+		  };
+		</script>
+   	```
   
   - доступ к элементу через this
     ```JS
-   <button onclick="alert(this.innerHTML)">Нажми меня</button>
-   ```
+  	<button onclick="alert(this.innerHTML)">Нажми меня</button>
+   	```
     Обработчик всегда хранится в свойстве DOM-объекта, а атрибут – лишь один из способов его инициализации.
 
 		Так как у элемента DOM может быть только одно свойство с именем onclick, то назначить более одного обработчика так нельзя.
