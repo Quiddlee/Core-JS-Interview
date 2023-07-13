@@ -883,25 +883,23 @@ Symbol.toPrimitive
   Обработчик события — это функция, которая срабатывает в момент возникновения события. В JavaScript обработчики событий можно навешивать несколькими способами.
   
   - с помощью атрибута HTML (Обработчик может быть назначен прямо в разметке, в атрибуте, который называется on<событие>)
-    ```javascript
-<input type="button" onclick="alert('Клик!')" value="Кнопка">
-```		
+     ```JS
+   <input type="button" onclick="alert('Клик!')" value="Кнопка">
+   ```
   - использовать свойства  DOM-объекта
-
-		 ```javascript
-<input type="button" onclick="alert('Клик!')" value="Кнопка">
-```	
-    * 
+ 		```JS
+   <input type="button" onclick="alert('Клик!')" value="Кнопка">
+   ```
+    
 <script>
   button.onclick = function() {
     alert('Клик!');
   };
 </script>
   - доступ к элементу через this
-    Доступ к элементу через this
-		```javascript
-<button onclick="alert(this.innerHTML)">Нажми меня</button>
-```		
+    ```JS
+   <button onclick="alert(this.innerHTML)">Нажми меня</button>
+   ```
     Обработчик всегда хранится в свойстве DOM-объекта, а атрибут – лишь один из способов его инициализации.
 
 		Так как у элемента DOM может быть только одно свойство с именем onclick, то назначить более одного обработчика так нельзя.
