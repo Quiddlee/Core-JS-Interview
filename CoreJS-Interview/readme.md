@@ -840,6 +840,7 @@ Symbol.toPrimitive
 - что такое BOM?
   
   Объектная модель браузера (Browser Object Model, BOM) – это дополнительные объекты, предоставляемые браузером (окружением), чтобы работать со всем, кроме документа.
+  <img width="775" alt="Снимок экрана 2023-07-13 в 18 59 13" src="https://github.com/olgamarkevich/Core-JS-Interview/assets/46402735/56a358cf-380d-4465-98fe-f3bcbf6de802">
 
 - что такое CSSOM?
   
@@ -882,35 +883,34 @@ Symbol.toPrimitive
   
   Обработчик события — это функция, которая срабатывает в момент возникновения события. В JavaScript обработчики событий можно навешивать несколькими способами.
   
-  - с помощью атрибута HTML (Обработчик может быть назначен прямо в разметке, в атрибуте, который называется on<событие>)
+  - с помощью атрибута HTML
+
+    Обработчик может быть назначен прямо в разметке, в атрибуте, который называется on<событие>
+    
   	```JS
    	<input type="button" onclick="alert('Клик!')" value="Кнопка">
    	```
   - использовать свойства  DOM-объекта
- 		```JS
+    ```JS
    	<input id="elem" type="button" value="Нажми меня!">
-		<script>
-		  elem.onclick = function() {
-		    alert('Спасибо');
-		  };
-		</script>
+    <script>
+  	elem.onclick = function() {
+    alert('Спасибо');
+  	};
+    </script>
    	```
-  
+
   - доступ к элементу через this
     ```JS
-  	<button onclick="alert(this.innerHTML)">Нажми меня</button>
+    <button onclick="alert(this.innerHTML)">Нажми меня</button>
    	```
-    Обработчик всегда хранится в свойстве DOM-объекта, а атрибут – лишь один из способов его инициализации.
-
-		Так как у элемента DOM может быть только одно свойство с именем onclick, то назначить более одного обработчика так нельзя.
-
- - addEventListener
-
-   element.addEventListener(eventName, eventHandler, [options]);
-	Метод addEventListener принимает три аргумента:
-		- eventName – название события, на которое назначается обработчик (например, ‘click’ или ‘mouseout’);
-		- eventHandler – функция-обработчик;
-		- ?options – необязательный параметр, который может быть или объектом со свойствами { ?capture, ?once, ?passive }, или значением true/false, что будет аналогично записи { capture: true/false }.
+  - addEventListener
+    element.addEventListener(eventName, eventHandler, [options]);
+    
+   	Метод addEventListener принимает три аргумента:
+  	+ eventName – название события, на которое назначается обработчик (например, ‘click’ или ‘mouseout’);
+   	+ eventHandler – функция-обработчик;
+    + ?options – необязательный параметр, который может быть или объектом со свойствами { ?capture, ?once, ?passive }, или значением true/false, что будет аналогично записи { capture: true/false }.
 
 	Есть два способа удалить обработчик, назначенный с помощью addEventListener:
 	- метод removeEventListener, который удаляет обработчик по ссылке.
