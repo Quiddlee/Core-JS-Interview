@@ -890,12 +890,7 @@ Symbol.toPrimitive
  		```JS
    <input type="button" onclick="alert('Клик!')" value="Кнопка">
    ```
-    
-<script>
-  button.onclick = function() {
-    alert('Клик!');
-  };
-</script>
+  
   - доступ к элементу через this
     ```JS
    <button onclick="alert(this.innerHTML)">Нажми меня</button>
@@ -905,7 +900,8 @@ Symbol.toPrimitive
 		Так как у элемента DOM может быть только одно свойство с именем onclick, то назначить более одного обработчика так нельзя.
 
  - addEventListener
-   * element.addEventListener(eventName, eventHandler, [options]);
+
+   element.addEventListener(eventName, eventHandler, [options]);
 	Метод addEventListener принимает три аргумента:
 		- eventName – название события, на которое назначается обработчик (например, ‘click’ или ‘mouseout’);
 		- eventHandler – функция-обработчик;
