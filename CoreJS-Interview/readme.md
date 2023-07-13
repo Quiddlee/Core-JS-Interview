@@ -863,25 +863,21 @@ Symbol.toPrimitive
 
 - браузерные события
   виды событий:
-
-		- cобытия мыши (click, dblclick, contextmenu, mouseover / mouseout, mousedown / mouseup, mousemove)
-  	- cобытия на элементах управления (submit, focus)
-  	- клавиатурные события (keydown, keyup)
-		- cобытия документа (DOMContentLoaded – когда HTML загружен и обработан, DOM документа полностью построен и доступен)
-  	- CSS events (transitionend, animationstart, animationiteration)
-  	- cобытия объектов и фреймов (load, resize)
-  	- cобытия перетаскивания (drag, dragstart, dragend)
+  + cобытия мыши (click, dblclick, contextmenu, mouseover / mouseout, mousedown / mouseup, mousemove)
+  + cобытия на элементах управления (submit, focus)
+  + клавиатурные события (keydown, keyup)
+  + cобытия документа (DOMContentLoaded – когда HTML загружен и обработан, DOM документа полностью построен и доступен)
+  + CSS events (transitionend, animationstart, animationiteration)
+  + cобытия объектов и фреймов (load, resize)
+  + cобытия перетаскивания (drag, dragstart, dragend)
   	  
 - фазы события
   
   Стандарт DOM Events описывает 3 фазы прохода события:
-  
-		* фаза погружения (capturing phase) – событие сначала идёт сверху вниз.
-  
-		* фаза цели (target phase) – событие достигло целевого(исходного) элемента.
-  
-		* фаза всплытия (bubbling stage) – событие начинает всплывать.
-  
+  - фаза погружения (capturing phase) – событие сначала идёт сверху вниз.
+  - фаза цели (target phase) – событие достигло целевого(исходного) элемента.
+  - фаза всплытия (bubbling stage) – событие начинает всплывать.
+
 - обработчик событий, как повесить, как убрать. Какой нюанс, если мы хотим удалить обработчик
   
   Обработчик события — это функция, которая срабатывает в момент возникновения события. В JavaScript обработчики событий можно навешивать несколькими способами.
